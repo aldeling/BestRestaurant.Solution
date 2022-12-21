@@ -3,7 +3,7 @@
 }
 
 @using BestRestaurant.Models;
-
+<div>
 <h1>Cuisines</h1>
 
 @if (@Model.Count == 0)
@@ -17,7 +17,12 @@
     <li>@Html.ActionLink($"{cuisine.Name}", "Details", new { id = cuisine.CuisineId })</li>
   }
 </ul>
+</div>
 
-<p>@Html.ActionLink("Add new Cuisine", "Create")</p>
-<p>@Html.ActionLink("Add new Restaurant", "Create", "Restaurants")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<ul class="navbar">
+<li class="navbar">@Html.ActionLink("Add Cuisine", "Create")</li>
+<li class="navbar">@Html.ActionLink("Add Restaurant", "Create", "Restaurants")</li>
+<li class="navbar">@Html.ActionLink("Home", "Index", "Home")</li>
+<li class="navbar">@Html.ActionLink("Restaurants", "Index", "Restaurants")</li>
+<li class="navbar">@Html.ActionLink("Cuisine", "Index", "Cuisines")</li>
+</ul>

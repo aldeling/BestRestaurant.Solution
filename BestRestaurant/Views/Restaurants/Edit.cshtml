@@ -4,7 +4,7 @@
 
 @model BestRestaurant.Models.Restaurant
 
-<h2>Edit</h2>
+<h1>Edit</h1>
 
 <h4>Edit this item: @Html.DisplayFor(model => model.Description)</h4>
 
@@ -12,14 +12,14 @@
 {
   @Html.HiddenFor(model => model.RestaurantId)
 
-  @Html.LabelFor(model => model.Name)
+  @Html.LabelFor(model => model.Name, new {@class = "labelcolor"})
   @Html.EditorFor(model => model.Name)
-  @Html.LabelFor(model => model.Description)
+  @Html.LabelFor(model => model.Description, new {@class = "labelcolor"})
   @Html.TextBoxFor(model => model.Description)
-  @Html.LabelFor(model => model.Review)
+  @Html.LabelFor(model => model.Review, new {@class = "labelcolor"})
   @Html.TextBoxFor(model => model.Review)
 
-  @Html.LabelFor(model => model.Cuisine)
+  @Html.LabelFor(model => model.Cuisine, new {@class = "labelcolor"})
   @Html.DropDownList("CuisineId")
 
   <input type="submit" value="Save" />

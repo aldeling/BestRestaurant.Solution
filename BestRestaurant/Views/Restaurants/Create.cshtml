@@ -4,21 +4,21 @@
 
 @model BestRestaurant.Models.Restaurant
 
-<h4>Add a new Restaurant</h4>
+<h1>Add a new Restaurant</h1>
 
 <p><strong>NOTE:</strong> You need to have at least one Cuisine before you can add a Restaurant!</p>
 <p>Go to @Html.ActionLink("this page", "Create", "Cuisines") to create a Cuisine.</p>
 
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.Name)
+  @Html.LabelFor(model => model.Name, new {@class = "labelcolor"})
   @Html.TextBoxFor(model => model.Name)
-  @Html.LabelFor(model => model.Description)
+  @Html.LabelFor(model => model.Description, new {@class = "labelcolor"})
   @Html.TextBoxFor(model => model.Description)
-  @Html.LabelFor(model => model.Review)
+  @Html.LabelFor(model => model.Review, new {@class = "labelcolor"})
   @Html.TextBoxFor(model => model.Review)
 
-  @Html.LabelFor(model => model.Cuisine)
+  @Html.LabelFor(model => model.Cuisine, new {@class = "labelcolor"})
   @Html.DropDownList("CuisineId")
 
   <input type="submit" value="Add new Restaurant" class="btn btn-default" />
